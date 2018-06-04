@@ -1,0 +1,9 @@
+*.xml
+*.json
+*.tf
+*.o
+*.dat
+i2
+hs-test
+l4*
+test_5
