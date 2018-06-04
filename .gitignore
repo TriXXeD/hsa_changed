@@ -1,3 +1,4 @@
+*.txt
 *.xml
 *.json
 *.tf
@@ -7,3 +8,6 @@ i2
 hs-test
 l4*
 test_5
+simple
+gen
+stanford
