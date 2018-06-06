@@ -53,10 +53,16 @@ nest0h13k2_res,34169786,4983113040.777778,25.666666666666668,37436304.88888889
 nest0h13k3_res,57730337,5799773730.0,29.555555555555557,52020655.11111111
 nest0h14k0_res,12800056,16044502.777777778,34.77777777777778,3825905.3333333335
 nest0h14k1_res,12800056,666332768.8888888,33.55555555555556,7451533.777777778
+nest0h14k2_res,,,,> 50gb 
+nest0h14k3_res,,,,> 50gb 
 nest0h15k0_res,22869298,28258338.666666668,40.111111111111114,6758519.555555556
 nest0h15k1_res,22869298,1342109622.2222223,28.0,13468429.333333334
+nest0h15k2_res,,,,> 50gb 
+nest0h15k3_res,,,,> 50gb 
 nest0h16k0_res,38817848,48141152.666666664,37.888888888888886,11364051.111111112
 nest0h16k1_res,38817848,2587944099.4444447,27.11111111111111,22883359.555555556
+nest0h16k2_res,,,,> 50gb 
+nest0h16k3_res,,,,> 50gb 
 nest1h1k0_res,0,3632.5555555555557,0.0,1740.4444444444443
 nest1h1k1_res,0,1448.6666666666667,0.0,1967.5555555555557
 nest1h1k2_res,0,6023.555555555556,0.0,1744.4444444444443
@@ -83,6 +89,44 @@ nest1h6k2_res,812303,25499576.333333332,44.888888888888886,1069507.111111111
 nest1h6k3_res,825265,24173729.888888888,44.111111111111114,1081101.3333333333
 nest1h7k0_res,53253132,94259966.0,22.22222222222222,22058072.0
 nest1h7k1_res,53253132,842776301.8888888,34.888888888888886,35078600.44444445
+nest1h7k2_res,,,,> 50gb 
+nest1h7k3_res,,,,> 50gb 
+nest1h8k0_res,,,,> 50gb 
+nest1h8k1_res,,,,> 50gb 
+nest1h8k2_res,,,,> 50gb 
+nest1h8k3_res,,,,> 50gb 
+nest1h9k0_res,,,,> 50gb 
+nest1h9k1_res,,,,> 50gb 
+nest1h9k2_res,,,,> 50gb 
+nest1h9k3_res,,,,> 50gb 
+nest1h10k0_res,,,,> 50gb 
+nest1h10k1_res,,,,> 50gb 
+nest1h10k2_res,,,,> 50gb 
+nest1h10k3_res,,,,> 50gb 
+nest1h11k0_res,,,,> 50gb 
+nest1h11k1_res,,,,> 50gb 
+nest1h11k2_res,,,,> 50gb 
+nest1h11k3_res,,,,> 50gb 
+nest1h12k0_res,,,,> 50gb 
+nest1h12k1_res,,,,> 50gb 
+nest1h12k2_res,,,,> 50gb 
+nest1h12k3_res,,,,> 50gb 
+nest1h13k0_res,,,,> 50gb 
+nest1h13k1_res,,,,> 50gb 
+nest1h13k2_res,,,,> 50gb 
+nest1h13k3_res,,,,> 50gb 
+nest1h14k0_res,,,,> 50gb 
+nest1h14k1_res,,,,> 50gb 
+nest1h14k2_res,,,,> 50gb 
+nest1h14k3_res,,,,> 50gb 
+nest1h15k0_res,,,,> 50gb 
+nest1h15k1_res,,,,> 50gb 
+nest1h15k2_res,,,,> 50gb 
+nest1h15k3_res,,,,> 50gb 
+nest1h16k0_res,,,,> 50gb 
+nest1h16k1_res,,,,> 50gb 
+nest1h16k2_res,,,,> 50gb 
+nest1h16k3_res,,,,> 50gb 
 nest2h1k0_res,0,3153.1111111111113,0.0,2486.222222222222
 nest2h1k1_res,0,7836.444444444444,0.0,2940.0
 nest2h1k2_res,0,3654.4444444444443,0.0,3387.1111111111113
@@ -103,3 +147,47 @@ nest2h5k0_res,792,38552.444444444445,0.0,9830.666666666666
 nest2h5k1_res,792,62684.666666666664,0.0,12372.888888888889
 nest2h5k2_res,1924,268315.1111111111,0.0,25756.88888888889
 nest2h5k3_res,2212,269446.3333333333,0.0,24440.0
+nest2h6k0_res,,,,> 50gb 
+nest2h6k1_res,,,,> 50gb 
+nest2h6k2_res,,,,> 50gb 
+nest2h6k3_res,,,,> 50gb 
+nest2h7k0_res,,,,> 50gb 
+nest2h7k1_res,,,,> 50gb 
+nest2h7k2_res,,,,> 50gb 
+nest2h7k3_res,,,,> 50gb 
+nest2h8k0_res,,,,> 50gb 
+nest2h8k1_res,,,,> 50gb 
+nest2h8k2_res,,,,> 50gb 
+nest2h8k3_res,,,,> 50gb 
+nest2h9k0_res,,,,> 50gb 
+nest2h9k1_res,,,,> 50gb 
+nest2h9k2_res,,,,> 50gb 
+nest2h9k3_res,,,,> 50gb 
+nest2h10k0_res,,,,> 50gb 
+nest2h10k1_res,,,,> 50gb 
+nest2h10k2_res,,,,> 50gb 
+nest2h10k3_res,,,,> 50gb 
+nest2h11k0_res,,,,> 50gb 
+nest2h11k1_res,,,,> 50gb 
+nest2h11k2_res,,,,> 50gb 
+nest2h11k3_res,,,,> 50gb 
+nest2h12k0_res,,,,> 50gb 
+nest2h12k1_res,,,,> 50gb 
+nest2h12k2_res,,,,> 50gb 
+nest2h12k3_res,,,,> 50gb 
+nest2h13k0_res,,,,> 50gb 
+nest2h13k1_res,,,,> 50gb 
+nest2h13k2_res,,,,> 50gb 
+nest2h13k3_res,,,,> 50gb 
+nest2h14k0_res,,,,> 50gb 
+nest2h14k1_res,,,,> 50gb 
+nest2h14k2_res,,,,> 50gb 
+nest2h14k3_res,,,,> 50gb 
+nest2h15k0_res,,,,> 50gb 
+nest2h15k1_res,,,,> 50gb 
+nest2h15k2_res,,,,> 50gb 
+nest2h15k3_res,,,,> 50gb 
+nest2h16k0_res,,,,> 50gb 
+nest2h16k1_res,,,,> 50gb 
+nest2h16k2_res,,,,> 50gb 
+nest2h16k3_res,,,,> 50gb 

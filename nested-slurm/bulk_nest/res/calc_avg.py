@@ -60,17 +60,17 @@ def add_to_csv(lines):
 		cnt = [int(c) for c in lines[0].split() if c.isdigit()]
 	except IndexError:
 		print(sys.argv[1], ' gives index error on line first line, presumebly out of memory run file')
-		newfile_lines = [
-				sys.argv[2],
-				'',
-				'',
-				'',
-				'> 50gb \n',
-				]
-		file_as_string = ','.join(newfile_lines)
-		out = 'avg/res.csv'
-		with open(out, 'a') as out_file:
-			out_file.write(file_as_string)
+		#newfile_lines = [
+		#		sys.argv[2],
+		#		'',
+		#		'',
+		#		'',
+		#		'> 50gb \n',
+		#		]
+		#file_as_string = ','.join(newfile_lines)
+		#out = 'avg/res.csv'
+		#with open(out, 'a') as out_file:
+		#	out_file.write(file_as_string)
 		return
 	microtime, seconds, mem = 0, 0, 0
 	for i in range(0, 9):
