@@ -83,9 +83,9 @@ def add_to_csv(lines):
 		seconds += rtime.second
 		lmem = [int(m) for m in lines[i*4+3].split() if m.isdigit()]
 		mem += lmem[0]
-	avg_micro = microtime/9
-	avg_seconds = seconds/9
-	avg_mem = mem/9
+	avg_micro = round(microtime/9, 2)
+	avg_seconds = round(seconds/9, 2)
+	avg_mem = round(mem/9, 2)
 	newfile_lines = [
 			sys.argv[2],
 			str(cnt[0]),
