@@ -1,3 +1,4 @@
+
 import sys
 import re
 from datetime import datetime, timedelta
@@ -32,9 +33,9 @@ def data_extract(lines):
 		lmicrotime = [int(t) for t in lines[i*4+1].split() if t.isdigit()]
 		microtime += lmicrotime[0]
 		try:
-			rtime = datetime.strptime(lines[i*4+2][-7:], "%M:%S.%f")
+			rtime = datetime.strptime(lines[i*4+2][37:], "%M:%S.%f")
 		except ValueError:
-			rtime = datetime.strptime(lines[i*4+2][-7:], "%H:%M:%S")
+			rtime = datetime.strptime(lines[i*4+2][37:], "%H:%M:%S")
 		seconds += rtime.second
 		lmem = [int(m) for m in lines[i*4+3].split() if m.isdigit()]
 		mem += lmem[0]
@@ -59,7 +60,7 @@ def add_to_csv(lines):
 	try:
 		cnt = [int(c) for c in lines[0].split() if c.isdigit()]
 	except IndexError:
-		print(sys.argv[1], ' gives index error on line first line, presumebly out of memory run file')
+		#print(sys.argv[1], ' gives index error on line first line, presumebly out of memory run file')
 		#newfile_lines = [
 		#		sys.argv[2],
 		#		'',
@@ -78,12 +79,14 @@ def add_to_csv(lines):
 		lmicrotime = [int(t) for t in lines[i*4+1].split() if t.isdigit()]
 		#microtime += lmicrotime[0]
 		microtime.append(lmicrotime[0])
+		print(lines[i*4+2][45:])
+		
 		try:
-			rtime = datetime.strptime(lines[i*4+2][-7:], "%M:%S.%f")
+			rtime = datetime.strptime(lines[i*4+2][45:], "%M:%S.%f")
 		except ValueError:
-			rtime = datetime.strptime(lines[i*4+2][-7:], "%H:%M:%S")
+			rtime = datetime.strptime(lines[i*4+2][45:], "%H:%M:%S")
 		#seconds += rtime.second
-		seconds.append(rtime.second + rtime.hour*60*60 + rtime.minute*60 + round(rtime.microsecond/1000000, 2))
+		seconds.append(rtime.second + rtime.minute*60 + rtime.hour*60*60 + round(rtime.microsecond/1000000, 2))
 		lmem = [int(m) for m in lines[i*4+3].split() if m.isdigit()]
 		#mem += lmem[0]
 		mem.append(lmem[0])
@@ -101,7 +104,7 @@ def add_to_csv(lines):
 			str(min_mem) + '\n',
 			]
 	file_as_string = ','.join(newfile_lines)
-	out = 'avg/res_min.csv'
+	out = 'avg/final.csv'
 	with open(out, 'a') as out_file:
 		out_file.write(file_as_string)
 

@@ -1,12 +1,12 @@
 #!/bin/bash
 #SBATCH --nodes 1
-#SBATCH --mem=50G
+#SBATCH --mem=250G
 #SBATCH --partition=production
 #SBATCH --cpus-per-task=4
 #SBATCH -n 1
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=slurm@satai.dk
-#SBATCH --array=0-191
+#SBATCH --array=52-191%16
 
 echo $SLURM_NODELIST
 echo $SLURM_NPROCS
