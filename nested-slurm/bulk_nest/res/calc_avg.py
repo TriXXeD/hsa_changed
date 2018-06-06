@@ -72,29 +72,36 @@ def add_to_csv(lines):
 		#with open(out, 'a') as out_file:
 		#	out_file.write(file_as_string)
 		return
-	microtime, seconds, mem = 0, 0, 0
+	#microtime, seconds, mem = 0, 0, 0
+	microtime, seconds, mem = [], [], []
 	for i in range(0, 9):
 		lmicrotime = [int(t) for t in lines[i*4+1].split() if t.isdigit()]
-		microtime += lmicrotime[0]
+		#microtime += lmicrotime[0]
+		microtime.append(lmicrotime[0])
 		try:
 			rtime = datetime.strptime(lines[i*4+2][-7:], "%M:%S.%f")
 		except ValueError:
 			rtime = datetime.strptime(lines[i*4+2][-7:], "%H:%M:%S")
-		seconds += rtime.second
+		#seconds += rtime.second
+		seconds.append(rtime.second)
 		lmem = [int(m) for m in lines[i*4+3].split() if m.isdigit()]
-		mem += lmem[0]
-	avg_micro = round(microtime/9, 2)
-	avg_seconds = round(seconds/9, 2)
-	avg_mem = round(mem/9, 2)
+		#mem += lmem[0]
+		mem.append(lmem[0])
+	#avg_micro = round(microtime/9, 2)
+	#avg_seconds = round(seconds/9, 2)
+	#avg_mem = round(mem/9, 2)
+	min_micro = min(mem)
+	min_seconds = min(seconds)
+	min_mem = min(mem)
 	newfile_lines = [
 			sys.argv[2],
 			str(cnt[0]),
-			str(avg_micro),
-			str(avg_seconds),
-			str(avg_mem) + '\n',
+			str(min_micro),
+			str(min_seconds),
+			str(min_mem) + '\n',
 			]
 	file_as_string = ','.join(newfile_lines)
-	out = 'avg/res.csv'
+	out = 'avg/res_min.csv'
 	with open(out, 'a') as out_file:
 		out_file.write(file_as_string)
 
