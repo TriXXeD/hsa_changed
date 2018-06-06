@@ -83,14 +83,14 @@ def add_to_csv(lines):
 		except ValueError:
 			rtime = datetime.strptime(lines[i*4+2][-7:], "%H:%M:%S")
 		#seconds += rtime.second
-		seconds.append(rtime.second)
+		seconds.append(rtime.second + rtime.hour*60*60 + rtime.minute*60)
 		lmem = [int(m) for m in lines[i*4+3].split() if m.isdigit()]
 		#mem += lmem[0]
 		mem.append(lmem[0])
 	#avg_micro = round(microtime/9, 2)
 	#avg_seconds = round(seconds/9, 2)
 	#avg_mem = round(mem/9, 2)
-	min_micro = min(mem)
+	min_micro = min(microtime)
 	min_seconds = min(seconds)
 	min_mem = min(mem)
 	newfile_lines = [
