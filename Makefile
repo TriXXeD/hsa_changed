@@ -1,7 +1,7 @@
 .PHONY: all clean
 
 CC = gcc
-CFLAGS = -g -Wall -O0 -std=gnu99 -I$(SRC_DIR) -I$(BUILD_DIR) -pthread -D_GNU_SOURCE
+CFLAGS = -g -Wall -O0 -std=gnu99 -I$(SRC_DIR) -I$(BUILD_DIR) -pthread -D_GNU_SOURCE -march=native
 LDFLAGS = -pthread
 
 APPS = $(patsubst %.c,%,$(filter-out apps.c,$(notdir $(wildcard $(SRC_DIR)/$(APP_DIR)/*.c))))
