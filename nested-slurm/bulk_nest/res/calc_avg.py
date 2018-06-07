@@ -100,7 +100,7 @@ def add_to_csv(lines):
 	min_micro = min(microtime)
 	min_seconds = min(seconds)
 	min_mem = min(mem)
-	min_mem = round(min_mem/1024/1024, 2)
+	min_mem = round(min_mem/1024, 2)
 	nest_lvl = sys.argv[2][4]
 	k = sys.argv[2][-1:]
 	header = sys.argv[2][6:-2]
