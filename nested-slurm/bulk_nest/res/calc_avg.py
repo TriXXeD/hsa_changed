@@ -114,7 +114,7 @@ def add_to_csv(lines):
 			str(min_mem) + '\n',
 			]
 	file_as_string = ','.join(newfile_lines)
-	out = 'avg/full_res.csv'
+	out = 'avg/res_full.csv'
 	with open(out, 'a') as out_file:
 		out_file.write(file_as_string)
 
