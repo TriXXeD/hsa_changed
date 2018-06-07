@@ -14,5 +14,5 @@ for i in $(seq 0 191); do
 	k=$(($i%4))
 	h=$(((($i/4)%16)+1))
 	nest=$(($i/64))
-	tail -n50 slurm-372*_$i.out | grep -A15 "Count:" | grep "Count\|Time\|Elapsed\|Maximum" >> res/nest${nest}h${h}k${k}_res.out
+	tail -n50 slurm-3*_$i.out | grep -A15 "Count:" | grep "Count\|Time\|Elapsed\|Maximum" >> res/nest${nest}h${h}k${k}_res.out
 done
