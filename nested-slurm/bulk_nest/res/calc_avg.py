@@ -61,17 +61,19 @@ def add_to_csv(lines):
 		cnt = [int(c) for c in lines[0].split() if c.isdigit()]
 	except IndexError:
 		#print(sys.argv[1], ' gives index error on line first line, presumebly out of memory run file')
-		#newfile_lines = [
-		#		sys.argv[2],
-		#		'',
-		#		'',
-		#		'',
-		#		'> 50gb \n',
-		#		]
-		#file_as_string = ','.join(newfile_lines)
-		#out = 'avg/res.csv'
-		#with open(out, 'a') as out_file:
-		#	out_file.write(file_as_string)
+		newfile_lines = [
+				sys.argv[2][4],
+				sys.argv[2][6:-2],
+				sys.argv[2][-1:],
+				'',
+				'',
+				'',
+				'> 250gb \n',
+				]
+		file_as_string = ','.join(newfile_lines)
+		out = 'avg/res_full.csv'
+		with open(out, 'a') as out_file:
+			out_file.write(file_as_string)
 		return
 	#microtime, seconds, mem = 0, 0, 0
 	microtime, seconds, mem = [], [], []
@@ -98,7 +100,7 @@ def add_to_csv(lines):
 	min_micro = min(microtime)
 	min_seconds = min(seconds)
 	min_mem = min(mem)
-	min_mem = min_mem/1024/1024
+	min_mem = round(min_mem/1024/1024, 2)
 	nest_lvl = sys.argv[2][4]
 	k = sys.argv[2][-1:]
 	header = sys.argv[2][6:-2]
@@ -112,7 +114,7 @@ def add_to_csv(lines):
 			str(min_mem) + '\n',
 			]
 	file_as_string = ','.join(newfile_lines)
-	out = 'avg/res.csv'
+	out = 'avg/full_res.csv'
 	with open(out, 'a') as out_file:
 		out_file.write(file_as_string)
 
