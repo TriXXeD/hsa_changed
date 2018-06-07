@@ -23,6 +23,6 @@ s7i1=(700001 2500001 6100001)
 
 echo "running reachabillity on nesting $nest with k: $k and h $h"
 echo "./h${h}k${k}_${nest}nest"
-echo "doing all reachability from port 100001 (should reach all)"
+echo "doing all reachability from port 100001(s1i1 to port xxxxx1 on router s7(s7i1)"
 /usr/bin/time -v ./gen h${h}k${k}_${nest}nest
 /usr/bin/time -v ./h${h}k${k}_${nest}nest 100001 ${s7i1[${nest}]}

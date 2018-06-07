@@ -12,7 +12,7 @@ for i in $(seq 0 191); do
         k=$(($i%4))
         h=$(((($i/4)%16)+1))
         nest=$(($i/64))
-        python3 calc_avg.py nest${nest}h${h}k${k}_res.out nest${nest}h${h}k${k}_res
+        python3 calc_avg.py nest${nest}h${h}k${k}_res.out nest${nest}h${h}k${k}
 done
 #for i in $(seq 0 191); do
 #        k=$(($i%4))

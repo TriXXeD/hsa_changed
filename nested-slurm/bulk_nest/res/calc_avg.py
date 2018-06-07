@@ -79,7 +79,6 @@ def add_to_csv(lines):
 		lmicrotime = [int(t) for t in lines[i*4+1].split() if t.isdigit()]
 		#microtime += lmicrotime[0]
 		microtime.append(lmicrotime[0])
-		print(lines[i*4+2][45:])
 		
 		try:
 			rtime = datetime.strptime(lines[i*4+2][45:], "%M:%S.%f")
@@ -90,21 +89,29 @@ def add_to_csv(lines):
 		lmem = [int(m) for m in lines[i*4+3].split() if m.isdigit()]
 		#mem += lmem[0]
 		mem.append(lmem[0])
+
+		if len(lines) < 7:
+			break
 	#avg_micro = round(microtime/9, 2)
 	#avg_seconds = round(seconds/9, 2)
 	#avg_mem = round(mem/9, 2)
 	min_micro = min(microtime)
 	min_seconds = min(seconds)
 	min_mem = min(mem)
+	nest_lvl = sys.argv[2][4]
+	k = sys.argv[2][-1:]
+	header = sys.argv[2][6:-2]
 	newfile_lines = [
-			sys.argv[2],
+			nest_lvl,
+			header,
+			k,
 			str(cnt[0]),
 			str(min_micro),
 			str(min_seconds),
 			str(min_mem) + '\n',
 			]
 	file_as_string = ','.join(newfile_lines)
-	out = 'avg/final.csv'
+	out = 'avg/res.csv'
 	with open(out, 'a') as out_file:
 		out_file.write(file_as_string)
 
